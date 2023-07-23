@@ -33,3 +33,32 @@ these interface describe how a userModel and User document will return data. We 
 ### Check Previous files:
 
 - [1 Model Initialize](https://github.com/aididalam/ticketing-ms/tree/0ee48f002529076e3914ece0f3d7a4f622ea93e4)
+
+### Tricks to use mongoose middleware
+
+here we can access the middleware through this:
+```
+userSchema.pre('save',async function (done) {
+    
+})
+```
+
+here we can overwrite the given value.
+
+so the middleware function will be:
+```
+userSchema.pre('save',async function (done) {
+    if(this.isModified('password')){
+        const hased=await Password.toHash(this.get('password'));
+        this.set('password',hased);
+    }
+    done();
+})
+```
+
+#### Notes on userSchema.pre
+
+- Done call to finish the process
+- this.isModified check if the given field is updated. 
+- When we first create the user object it will consider the field as modified
+- if we do not use that check everytime when we update user data we will also update the password and this may lead to rehash a hashed password
