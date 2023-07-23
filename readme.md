@@ -32,4 +32,4 @@ these interface describe how a userModel and User document will return data. We 
 
 ### Check Previous files:
 
-- [1](https://github.com/aididalam/ticketing-ms/tree/0ee48f002529076e3914ece0f3d7a4f622ea93e4)
+- [1 Model Initialize](https://github.com/aididalam/ticketing-ms/tree/0ee48f002529076e3914ece0f3d7a4f622ea93e4)
