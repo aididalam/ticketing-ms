@@ -20,3 +20,12 @@ to check the types. So we will add a new function with the provided interface
 
 [Check from line 21 to line 24](https://github.com/aididalam/ticketing-ms/blob/237b770552eccc713ff7694de1c0f52a8acfdbc9/auth/src/models/user.ts#L21-L24)
 
+---
+
+Now we will change these functions to make things beautiful.
+
+We have added new two interface
+- [userModel](#)
+- [UserModel](#)
+
+these interface describe how a userModel and User document will return data. We have also assign it to mongoose [model](#)
