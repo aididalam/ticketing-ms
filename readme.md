@@ -25,10 +25,10 @@ to check the types. So we will add a new function with the provided interface
 Now we will change these functions to make things beautiful.
 
 We have added new two interface
-- [userModel](#)
-- [UserModel](#)
+- [userModel](https://github.com/aididalam/ticketing-ms/blob/8441d328ab6f891af04f984daa6be01fddda3a0d/auth/src/models/user.ts#L10-L14)
+- [UserModel](https://github.com/aididalam/ticketing-ms/blob/8441d328ab6f891af04f984daa6be01fddda3a0d/auth/src/models/user.ts#L16-L21)
 
-these interface describe how a userModel and User document will return data. We have also assign it to mongoose [model](#)
+these interface describe how a userModel and User document will return data. We have also assign it to mongoose [model](https://github.com/aididalam/ticketing-ms/blob/8441d328ab6f891af04f984daa6be01fddda3a0d/auth/src/models/user.ts#L39)
 
 ### Check Previous files:
 
