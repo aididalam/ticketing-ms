@@ -7,11 +7,10 @@ import { currentUserRouter } from './routes/current-user';
 import { signinRouter } from './routes/signin';
 import { signoutRouter } from './routes/signout';
 import { signupRouter } from './routes/signup';
-import { errorHandler } from './middlewars/error-handler';
-import { NotFoundError } from './errors/not-found-error';
+import { errorHandler, NotFoundError } from '@sgtickets445/common';
 
 const app = express();
-app.set('trust proxy',true);
+app.set('trust proxy', true);
 app.use(json());
 app.use(cookieSession({
   signed: false,
@@ -22,9 +21,9 @@ app.use(currentUserRouter);
 app.use(signinRouter);
 app.use(signoutRouter);
 app.use(signupRouter);
-app.all('*',async (req,res,next)=>{
+app.all('*', async (req, res, next) => {
   throw new NotFoundError();
 })
 app.use(errorHandler);
 
-export {app}
+export { app }
